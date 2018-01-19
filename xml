@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/parchment"
+    tools:context="com.example.android.scorekeeper.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/gryiffindor" />
+
+            <TextView
+                android:id="@+id/gryffindor_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="56dp"
+
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:onClick="tenPointsGryffindor"
+                android:text="10 points" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:onClick="goldenSnitchGryiffindor"
+                android:text="Golden Snitch" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ravenclaw" />
+
+            <TextView
+                android:id="@+id/ravenclaw_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="56dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:onClick="tenPointsRavenclaw"
+                android:text="10 points" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_horizontal"
+                android:onClick="goldenSnitchRavenclaw"
+                android:text="Golden Snitch" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@id/reset"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/hogwarts_crest" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif"
+        android:onClick="resetScore"
+        android:text="Reset" />
+</RelativeLayout>
